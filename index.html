@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topo">
+        <div class="conteudo-topo">
+            <div class="titulo">DrivenEats</div>
+            <div class="sub-titulo">Sua comida em 6 minutos</div>
+        </div>
+    </div>
+    <div class="conteudo">
+        <div class="titulo-menu">Primeiro, seu prato</div>
+        <div class="prato menu">
+            <div class="pedidos" onclick="adicionarIcone1(this); selecionarPrato(this)">
+                <div class="info-pedido">
+                    <img src="projeto__driven-eats__imagens/pf_frango.jpg">
+                    <div class="titulo-prato titulo-pedido">Filé de frango</div>
+                    <div class="itens">Arroz, feijão, 2 filés de frango, farofa, salada</div>
+                    <div class="preço">R$ 24,90</div>
+                </div>
+            </div>
+            <div class="pedidos" onclick="adicionarIcone1(this); selecionarPrato(this)">
+                <div class="info-pedido">
+                    <img src="projeto__driven-eats__imagens/pf_carne.jpg">
+                    <div class="titulo-prato titulo-pedido">Filé de carne</div>
+                    <div class="itens">Arroz, feijão, 1 filé de carne, ovo, batata frita, salada</div>
+                    <div class="preço">R$ 29,90</div>
+                </div>
+            </div>
+            <div class="pedidos" onclick="adicionarIcone1(this); selecionarPrato(this)">
+                <div class="info-pedido">
+                    <img src="projeto__driven-eats__imagens/pf_calabresa.png">
+                    <div class="titulo-prato titulo-pedido">Calabresa</div>
+                    <div class="itens">Arroz, feijão, calabresa fatiada, batata frita, salada</div>
+                    <div class="preço">R$ 24,90</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="titulo-menu">Agora, sua bebida</div>
+        <div class="bebida menu">
+            <div class="pedidos" onclick="adicionarIcone2(this); selecionarBebida(this)">
+                <div class="info-pedido">
+                    <img src="projeto__driven-eats__imagens/coca.png">
+                    <div class="titulo-bebida titulo-pedido">Coca-Cola</div>
+                    <div class="itens">Lata 350ml</div>
+                    <div class="preço">R$ 4,90</div>
+                </div>
+            </div>
+            <div class="pedidos" onclick="adicionarIcone2(this); selecionarBebida(this)">
+                <div class="info-pedido">
+                    <img src="projeto__driven-eats__imagens/suco.png">
+                    <div class="titulo-bebida titulo-pedido">Suco de laranja</div>
+                    <div class="itens">Copo 450ml</div>
+                    <div class="preço">R$ 3,90</div>
+                </div>
+            </div>
+            <div class="pedidos" onclick="adicionarIcone2(this); selecionarBebida(this)">
+                <div class="info-pedido">
+                    <img src="projeto__driven-eats__imagens/fanta.png">
+                    <div class="titulo-bebida titulo-bebida titulo-pedido">Fanta-Laranja</div>
+                    <div class="itens">Lata 350ml</div>
+                    <div class="preço">R$ 4,90</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="titulo-menu">Por fim, sua sobremesa</div>
+        <div class="sobremesa menu">
+            <div class="pedidos" onclick="adicionarIcone3(this); selecionarSobremesa(this)">
+                <div class="info-pedido">
+                    <img src="projeto__driven-eats__imagens/pudim.jpg">
+                    <div class="titulo-sobremesa titulo-pedido">Pudim</div>
+                    <div class="itens">Pudim de 150g</div>
+                    <div class="preço">R$ 7,90 </div>
+                </div>
+            </div>
+            <div class="pedidos" onclick="adicionarIcone3(this); selecionarSobremesa(this)">
+                <div class="info-pedido">
+                    <img src="projeto__driven-eats__imagens/mouse.jpg">
+                    <div class="titulo-sobremesa titulo-pedido">Mousse de maracujá</div>
+                    <div class="itens">Mousse de 150g</div>
+                    <div class="preço">R$ 7,90</div>
+                </div>
+            </div>
+            <div class="pedidos" onclick="adicionarIcone3(this); selecionarSobremesa(this)">
+                <div class="info-pedido">
+                    <img src="projeto__driven-eats__imagens/brownie.jpg">
+                    <div class="titulo-sobremesa titulo-pedido">Brownie</div>
+                    <div class="itens">3 brownies de 50g</div>
+                    <div class="preço">R$ 5,90</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="botao-final">
+        <button class="botao1" onclick="confirmarPedido()">Selecione os 3 itens para fechar o pedido</button>
+    </div>
+
+    <div class="fundo-branco invisivel">
+        <div class="confirmar-pedido ">
+            <div class="titulo-cofirmar">Confirme seu pedido</div>
+            <div class="pedidos-confirmados">
+                <div class="prato-confirmado">
+                    <div class="nome-prato-confirmado"></div>
+                    <div class="preço-prato-confirmado"></div>
+                </div>
+                <div class="bebida-confirmada">
+                    <div class="nome-bebida-confirmada"></div>
+                    <div class="preço-bebida-confirmada"></div>
+                </div>
+                <div class="sobremesa-confirmada">
+                    <div class="nome-sobremesa-confirmada"></div>
+                    <div class="preço-sobremesa-confirmada"></div>
+                </div>
+                <div class="valor-total"></div>
+            </div>
+            <div class="botoes">
+                <div class="ok">
+                    <button class="botao2" onclick="ok()">Ok</button>
+                </div>
+                <div class="cancelar" onclick="cancelarPedido()">Cancelar</div>
+            </div> 
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
